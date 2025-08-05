@@ -77,7 +77,7 @@ function updatePlayerScore(active = false) {
       }, 600);
     } else if (max > 21) {
       setPlayerActionsActive(false);
-      showEndMessage(false);
+      (false);
     } else {
       setPlayerActionsActive(true);
     }
@@ -85,7 +85,7 @@ function updatePlayerScore(active = false) {
 
 }
 
-function showEndMessage(win) {
+function (win) {
   const overlay = document.getElementById('message-overlay');
   let txt, cls;
   if (win === true) { txt = 'WYGRANA!'; cls = 'win'; }
@@ -494,12 +494,12 @@ async function dealerTurn() {
 
   if (dealerPoints > 21) {
     updateDealerScore();
-    showEndMessage(true);
+    (true);
     return;
   }
   if (dealerPoints > playerPoints) {
     updateDealerScore();
-    showEndMessage(false);
+    (false);
     return;
   }
   
@@ -511,7 +511,7 @@ async function dealerTurn() {
     document.getElementById('dealer-score').classList.add('draw');
     document.getElementById('player-score').classList.remove('success', 'fail');
     document.getElementById('player-score').classList.add('draw');
-    showEndMessage(null);
+    (null);
     return;
   }
 
@@ -522,11 +522,11 @@ async function dealerTurn() {
     updateDealerScore();
 
     if (dealerPoints > 21) {
-      showEndMessage(true);
+      (true);
       return;
     }
     if (dealerPoints > playerPoints) {
-      showEndMessage(false);
+      (false);
       return;
     }
     if (
@@ -537,7 +537,7 @@ async function dealerTurn() {
       document.getElementById('dealer-score').classList.add('draw');
       document.getElementById('player-score').classList.remove('success', 'fail');
       document.getElementById('player-score').classList.add('draw');
-      showEndMessage('draw');
+      showEndMessage(null);
       return;
     }
   }
@@ -604,6 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showBetModal();
   }, 1200);
 });
+
 
 
 
