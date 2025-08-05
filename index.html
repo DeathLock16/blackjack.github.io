@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>BlackJack vs AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="message-overlay"></div>
+
+  <div id="bet-amount-box" class="score-box">0</div>
+  <div id="dealer-area">
+    <div id="dealer-cards"></div>
+  </div>
+  <div id="dealer-score" class="score-box">0</div>
+
+  <div id="player-area">
+    <div id="player-cards"></div>
+  </div>
+  <div id="player-score" class="score-box">0</div>
+
+  <div id="left-panel">
+    <button id="btn-pass" class="action-btn" disabled>Pass</button>
+    <button id="btn-hit" class="action-btn" disabled>Dobierz</button>
+    <button id="btn-double" class="action-btn" disabled>Podwój</button>
+  </div>
+
+  <div id="funds-box"></div>
+
+  <div id="card-deck"></div>
+  <div id="bet-modal" style="display:none;">
+    <div id="bet-box">
+      <div id="bet-title">Ile chcesz postawić?</div>
+      <div id="bet-funds">Masz: <span id="funds-value">500</span> żetonów</div>
+      <div id="bet-options">
+        <button class="bet-btn" data-bet="50">50</button>
+        <button class="bet-btn" data-bet="100">100</button>
+        <button class="bet-btn" data-bet="150">150</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
