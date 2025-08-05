@@ -510,7 +510,7 @@ async function dealerTurn() {
     document.getElementById('dealer-score').classList.add('draw');
     document.getElementById('player-score').classList.remove('success', 'fail');
     document.getElementById('player-score').classList.add('draw');
-    showEndMessage('draw');
+    showEndMessage(null);
     return;
   }
 
@@ -588,3 +588,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showBetModal();
   }, 1200);
 });
+
