@@ -430,6 +430,7 @@ async function playerFirstDeal() {
   clearPlayerCards();
   await animatePlayerCard({reveal: true, delay: 400});
   await animatePlayerCard({reveal: true, delay: 400});
+  updatePlayerScore(true);
 }
 
 async function startGame() {
@@ -603,5 +604,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showBetModal();
   }, 1200);
 });
+
 
 
