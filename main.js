@@ -573,6 +573,21 @@ document.getElementById('btn-double').addEventListener('click', async () => {
   await animatePlayerCard({reveal: true, delay: 150});
   updatePlayerScore(false);
 
+  const ptsStr = calcPoints(playerCardsState);
+  const ptsArr = ptsStr.split('/').map(x => +x.trim());
+  const max = Math.max(...ptsArr);
+
+  if (max > 21) {
+    showEndMessage(false);
+    return;
+  }
+  if (max === 21) {
+    setTimeout(() => {
+      dealerTurn();
+    }, 600);
+    return;
+  }
+  
   setTimeout(() => {
     dealerTurn();
   }, 700);
@@ -588,4 +603,5 @@ document.addEventListener('DOMContentLoaded', () => {
     showBetModal();
   }, 1200);
 });
+
 
